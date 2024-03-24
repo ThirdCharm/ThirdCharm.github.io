@@ -1,45 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link
-			rel="stylesheet"
-			href="https://fonts.googleapis.com/css?family=Oswald"
-		/>
-		<title>Third Charm Games</title>
-		<link rel="stylesheet" href="assets/css/style.css" />
-	</head>
-	<body>
-		<div class="container">
-			<div class="content">
-				<img src="assets/images/icon.png" alt="Circular Image" class="circular-image" />
-				<h1>Third Charm Games</h1>
-				<div class="mainLinks">
-					| <a href="#" data-content="about-content" class="content-link">About</a>
-                    | <a href="#" data-content="links-content" class="content-link">Members</a>
-                    <!-- | <a href="#">Resume</a> -->
-                    |
-				</div>
-			</div>
-            <div class="about-content content-section fade content-hide" id="aboutContent">
-                <p>Howdy, we're just a group of friends making some games.</p>
-            </div>
-            <div class="links-content content-section fade content-hide" id="linksContent">
-                <div class="social-link">
-                    <img src="assets/images/dalton.jpg" alt="Dalton's Profile Picture" class="social-icon" />
-                    <span>Dalton Williams</span>
-                </div>
-                <div class="social-link">
-                    <img src="assets/images/patrick.png" alt="Patricks's Profile Picture" class="social-icon" />
-                    <span>Patrick Caldwell</span>
-                </div>
-                <div class="social-link">
-                    <img src="assets/images/shea.jpg" alt="Shea's Profile Picture" class="social-icon" />
-                    <span>Shea Murphy</span>
-                </div>
-            </div>
-            <script src="assets/scripts/script.js"></script>
-		</div>
-	</body>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simple Layout</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const navLinks = document.querySelectorAll('.nav-link');
+    const contentSections = document.querySelectorAll('.content-section');
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetSection = document.querySelector(link.getAttribute('href'));
+        
+        contentSections.forEach(section => {
+          section.classList.add('hidden');
+          section.classList.remove('flex');
+        });
+
+        targetSection.classList.remove('hidden');
+        targetSection.classList.add('flex');
+      });
+    });
+  });
+</script>
+<style>
+  /* This style ensures that the content block does not become too wide on larger screens */
+  .content-block {
+    max-width: 640px; /* Adjust this value as needed */
+  }
+</style>
+</head>
+<body>
+
+<div class="flex flex-col min-h-screen bg-gray-200">
+  <nav class="bg-gray-100 p-4 flex justify-between items-center w-full shadow-md">
+    <div class="p-2">Logo</div>
+    <div class="flex-grow flex justify-center items-center space-x-4">
+      <a href="#home" class="nav-link block p-2 text-gray-700 hover:text-gray-900">Home</a>
+      <a href="#about" class="nav-link block p-2 text-gray-700 hover:text-gray-900">About</a>
+      <a href="#members" class="nav-link block p-2 text-gray-700 hover:text-gray-900">Members</a>
+      <a href="#games" class="nav-link block p-2 text-gray-700 hover:text-gray-900">Games</a>
+    </div>
+  </nav>
+
+  <!-- Main content area -->
+  <div class="flex-grow flex items-center justify-center p-4">
+    <section id="home" class="content-section flex flex-col items-center justify-center p-10 bg-white rounded-lg shadow-lg content-block">
+      Home Content
+    </section>
+
+    <section id="about" class="content-section hidden flex-col items-center justify-center p-10 bg-white rounded-lg shadow-lg content-block">
+      About Content
+    </section>
+
+    <section id="members" class="content-section hidden flex-col items-center justify-center p-10 bg-white rounded-lg shadow-lg content-block">
+      Members Content
+    </section>
+
+    <section id="games" class="content-section hidden flex-col items-center justify-center p-10 bg-white rounded-lg shadow-lg content-block">
+      Games Content
+    </section>
+  </div>
+</div>
+
+</body>
 </html>
