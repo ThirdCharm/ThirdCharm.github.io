@@ -40,97 +40,55 @@
 	</head>
 	<body style="background-image: url('./assets/images/background.jpg')">
 		<div class="flex flex-col min-h-screen">
-			<nav
-				class="p-4 flex justify-between items-center w-full shadow-md header"
-			>
-				<img
-					src="assets/images/icon.png"
-					alt="Circular Image"
-					class="h-16"
-				/>
-				<div
-					class="flex-grow flex justify-center items-center space-x-4"
-				>
-					<a
-						href="#home"
-						class="nav-link block p-2 text-gray-700 hover:text-gray-900"
-						>Home</a
-					>
-					<a
-						href="#about"
-						class="nav-link block p-2 text-gray-700 hover:text-gray-900"
-						>About</a
-					>
-					<a
-						href="#members"
-						class="nav-link block p-2 text-gray-700 hover:text-gray-900"
-						>Members</a
-					>
-					<a
-						href="#games"
-						class="nav-link block p-2 text-gray-700 hover:text-gray-900"
-						>Games</a
-					>
+            <!-- Header -->
+			<nav class="p-4 flex justify-between items-center shadow-md header">
+				<img src="assets/images/icon.png" alt="Circular Image" class="h-12" />
+				<div class="flex-grow flex justify-center items-center space-x-4" >
+					<a href="#home" class="nav-link block p-2" >Home</a>
+					<!-- <a href="#about" class="nav-link block p-2">About</a> -->
+					<a href="#members" class="nav-link block p-2">Members</a>
+					<a href="#games" class="nav-link block p-2" >Games</a>
 				</div>
+                <!-- I had no idea how to easily add the same padding the left logo provides, but on the right side so...
+                     Here we are. That's problem solving baby-->
+				<img src="assets/images/icon.png" alt="Circular Image" class="h-12 opacity-0" />
 			</nav>
 
 			<!-- Main content area -->
 			<div class="flex-grow flex items-center justify-center p-4">
-				<section
-					id="home"
-					class="content-section flex flex-col items-center justify-center p-10 bg-white rounded-lg shadow-lg content-block"
-				>
+                <!-- Home section -->
+				<section id="home" class="content-section flex flex-col items-center justify-center p-10 rounded-lg shadow-lg content-block">
 					<div>
-						<img
-							src="assets/images/icon.png"
-							alt="Circular Image"
-							class="circular-image"
-						/>
-						<h1 class="text-center">Third Charm Games</h1>
+						<img src="assets/images/icon.png" alt="Circular Image" class="p-4" />
+						<h1 class="text-center text-2xl">Third Charm Games</h1>
 					</div>
 				</section>
-
-				<section
-					id="about"
-					class="content-section hidden flex-col items-center justify-center p-10 bg-white rounded-lg shadow-lg content-block"
-				>
+                <!-- About section -->
+				<!-- <section id="about" class="content-section hidden flex-col items-center justify-center p-10 rounded-lg shadow-lg content-block" >
 					About Content
-				</section>
-
-				<section
-					id="members"
-					class="content-section hidden flex-col items-center justify-center p-10 bg-white rounded-lg shadow-lg content-block"
-				>
-					<div class="member-link">
-						<img
-							src="assets/images/dalton.jpg"
-							alt="Dalton's Profile Picture"
-							class="w-32 h-32 flex"
-						/>
-						<span>Dalton Williams</span>
+				</section> -->
+                
+                <!-- Members section -->
+				<section id="members" class="content-section hidden flex-col p-10 rounded-lg shadow-lg" >
+					<div class="flex items-center mb-4">
+						<img src="assets/images/dalton.jpg" alt="Dalton's Profile Picture" 
+                        class=" w-16 h-16 mr-4" />
+						<span class="flex-1 min-w-0">Dalton Williams</span>
 					</div>
-					<div class="member-link">
-						<img
-							src="assets/images/patrick.png"
-							alt="Patricks's Profile Picture"
-							class="social-icon"
-						/>
-						<span>Patrick Caldwell</span>
+					<div class="flex items-center mb-4">
+						<img src="assets/images/patrick.png" alt="Patricks's Profile Picture" 
+                        class=" w-16 h-16 mr-4" />
+						<span class="flex-1 min-w-0">Patrick Caldwell</span>
 					</div>
-					<div class="member-link">
-						<img
-							src="assets/images/shea.jpg"
-							alt="Shea's Profile Picture"
-							class="social-icon"
-						/>
-						<span>Shea Murphy</span>
+					<div class="flex items-center mb-4">
+						<img src="assets/images/shea.jpg" alt="Shea's Profile Picture" 
+                        class=" w-16 h-16 mr-4" />
+						<span class="flex-1 min-w-0">Shea Murphy</span>
 					</div>
 				</section>
-
-				<section
-					id="games"
-					class="content-section hidden flex-col items-center justify-center p-10 bg-white rounded-lg shadow-lg content-block"
-				>
+                
+                <!-- Games section -->
+				<section id="games" class="content-section hidden flex-col items-center justify-center p-10 rounded-lg shadow-lg content-block" >
 					Games Content
 				</section>
 			</div>
