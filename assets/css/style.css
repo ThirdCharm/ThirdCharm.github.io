@@ -15,7 +15,6 @@ body {
 .header {
     border-radius: 10px;
     background: rgba(22, 22, 22, 0.7);
-    margin: 10px;
     width: calc(100vw - 20px);
 }
 

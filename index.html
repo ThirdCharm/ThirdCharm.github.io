@@ -32,10 +32,10 @@
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald" />
         <link rel="stylesheet" href="assets/css/style.css" />
 	</head>
-	<body style="background-image: url('./assets/images/background.jpg')">
+	<body class="bg-cover bg-fixed">
 		<div class="flex flex-col min-h-screen">
             <!-- Header -->
-			<nav class="p-4 flex justify-between items-center shadow-md header">
+			<nav class="p-4 flex justify-between items-center shadow-md header sticky top-2 m-2">
 				<img src="assets/images/icon.png" alt="Circular Image" class="h-12" />
 				<div class="flex-grow flex justify-center items-center space-x-4" >
 					<a href="#home" class="nav-link block p-2" >Home</a>
@@ -82,26 +82,74 @@
 				</section>
                 
                 <!-- Games section -->
-				<section id="games" class="content-section hidden p-10 rounded-lg shadow-lg w-3/5" >
-                    <div class="flex mx-auto rounded-lg overflow-hidden shadow-lg w-full">
+				<section id="games" class="content-section hidden flex flex-col h-4/5 w-2/3 p-8 *:my-4" >
+                    <div class="game flex">
                         <!-- Game Image -->
-                        <div class="flex-none w-1/2">
-                          <img src="assets/images/Hookshot.png" alt="I Wanna Hookshot game example" class="object-cover w-full h-full">
-                        </div>
+                        <img src="assets/images/Hookshot.png" alt="I Wanna Hookshot game example" class="w-1/4 aspect-square object-cover">
+                
                         <!-- Content Area -->
-                        <div class="flex-1 p-4 overflow-y-auto">
-                          <h2 class="font-bold mb-2 text-xl">I Wanna Hookshot</h2>
-                          <p class="mb-4">Made for Game Maker's Toolkit Jam 2018. A platformer where you can't move your character with the keys, only via hookshot! Zip through these levels and collect coins along the way.</p>
-                          <!-- Credits List -->
-                          <div class="mt-4">
-                            <h3 class="font-semibold mb-2">Credits:</h3>
-                            <ul class="list-none space-y-2">
-                              <li>Dalton Williams - Programming, Level Design</li>
-                              <li>Patrick Caldwell - Art, Level Design</li>
-                              <li>David Gipson - Music, Level Design</li>
-                              <li>Riley Caldwell - Programming, Level Design</li>
-                            </ul>
-                          </div>
+                        <div class="flex flex-col">
+                            <div class="mb-8">
+                                <h2 class="font-bold mb-2 text-xl">I Wanna Hookshot</h2>
+                                <p>Made for Game Maker's Toolkit Jam 2018. A platformer where you can't move your character with the keys, only via hookshot! Zip through these levels and collect coins along the way.</p>
+                            </div>    
+                            
+                            <!-- Credits List -->
+                            <div>
+                                <h3 class="font-semibold mb-2">Credits:</h3>
+                                <ul class="list-none">
+                                    <li>Dalton Williams - Programming, Level Design</li>
+                                    <li>Patrick Caldwell - Art, Level Design</li>
+                                    <li>David Gipson - Music, Level Design</li>
+                                    <li>Riley Caldwell - Programming, Level Design</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="game flex">
+                        <!-- Game Image -->
+                        <img src="assets/images/Hookshot.png" alt="I Wanna Hookshot game example" class="w-1/4 aspect-square object-cover">
+                
+                        <!-- Content Area -->
+                        <div class="flex flex-col">
+                            <div class="mb-8">
+                                <h2 class="font-bold mb-2 text-xl">I Wanna Hookshot</h2>
+                                <p>Made for Game Maker's Toolkit Jam 2018. A platformer where you can't move your character with the keys, only via hookshot! Zip through these levels and collect coins along the way.</p>
+                            </div>    
+                            
+                            <!-- Credits List -->
+                            <div>
+                                <h3 class="font-semibold mb-2">Credits:</h3>
+                                <ul class="list-none">
+                                    <li>Dalton Williams - Programming, Level Design</li>
+                                    <li>Patrick Caldwell - Art, Level Design</li>
+                                    <li>David Gipson - Music, Level Design</li>
+                                    <li>Riley Caldwell - Programming, Level Design</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="game flex">
+                        <!-- Game Image -->
+                        <img src="assets/images/Hookshot.png" alt="I Wanna Hookshot game example" class="w-1/4 aspect-square object-cover">
+                
+                        <!-- Content Area -->
+                        <div class="flex flex-col">
+                            <div class="mb-8">
+                                <h2 class="font-bold mb-2 text-xl">I Wanna Hookshot</h2>
+                                <p>Made for Game Maker's Toolkit Jam 2018. A platformer where you can't move your character with the keys, only via hookshot! Zip through these levels and collect coins along the way.</p>
+                            </div>    
+                            
+                            <!-- Credits List -->
+                            <div>
+                                <h3 class="font-semibold mb-2">Credits:</h3>
+                                <ul class="list-none">
+                                    <li>Dalton Williams - Programming, Level Design</li>
+                                    <li>Patrick Caldwell - Art, Level Design</li>
+                                    <li>David Gipson - Music, Level Design</li>
+                                    <li>Riley Caldwell - Programming, Level Design</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
 				</section>
